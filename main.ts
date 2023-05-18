@@ -98,19 +98,7 @@ function stop () {
     neZha.setMotorSpeed(neZha.MotorList.M2, 0)
 }
 input.onButtonPressed(Button.A, function () {
-    while (true) {
-        上1()
-        中1()
-        下A1()
-        下B1()
-        下C1()
-        下C2()
-        下B2()
-        下A2()
-        中2()
-        上2()
-        上2()
-    }
+	
 })
 function 下A1 () {
     自动后退(200)
