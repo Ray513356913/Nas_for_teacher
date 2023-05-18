@@ -97,9 +97,6 @@ function stop () {
     neZha.setMotorSpeed(neZha.MotorList.M1, 0)
     neZha.setMotorSpeed(neZha.MotorList.M2, 0)
 }
-input.onButtonPressed(Button.A, function () {
-	
-})
 function 下A1 () {
     自动后退(200)
     左转直到压线()
@@ -191,6 +188,21 @@ function 上2 () {
         左转直到压线()
     }
 }
+input.onButtonPressed(Button.B, function () {
+    while (true) {
+        上1()
+        中1()
+        下A1()
+        下B1()
+        下C1()
+        下C2()
+        下B2()
+        下A2()
+        中2()
+        上2()
+        上2()
+    }
+})
 function 巡线到全白停止 () {
     while (true) {
         if (PlanetX_Basic.trackingSensor(PlanetX_Basic.DigitalRJPin.J1, PlanetX_Basic.TrackingStateType.Tracking_State_3) && PlanetX_Basic.trackingSensor(PlanetX_Basic.DigitalRJPin.J2, PlanetX_Basic.TrackingStateType.Tracking_State_3)) {
